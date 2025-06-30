@@ -173,7 +173,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
             ),
           ),
           Expanded(
-            flex: 3,
+            flex: 4,
             child: Container(
               padding: EdgeInsets.all(8),
               child: Column(
@@ -252,9 +252,12 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
               ),
             ),
           ),
-          HistoryPanel(
-            history: history,
-            onClear: clearHistory,
+          Expanded(
+            flex: 2,
+            child: HistoryPanel(
+              history: history,
+              onClear: clearHistory,
+            ),
           ),
         ],
       ),

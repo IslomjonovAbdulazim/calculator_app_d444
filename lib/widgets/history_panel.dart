@@ -15,7 +15,6 @@ class HistoryPanel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.surfaceVariant,
         borderRadius: BorderRadius.only(
@@ -76,3 +75,4 @@ class HistoryPanel extends StatelessWidget {
     );
   }
 }
+
