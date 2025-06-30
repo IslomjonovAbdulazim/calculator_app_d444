@@ -1,20 +1,31 @@
 import 'package:flutter/material.dart';
-import 'calculator_screen.dart';
+import 'pages/home_page.dart';
 
 void main() {
-  runApp(CalculatorApp());
+  runApp(ChessApp());
 }
 
-class CalculatorApp extends StatelessWidget {
+class ChessApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Calculator',
+      title: 'Chess Game',
       theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.brown,
+          brightness: Brightness.light,
+        ),
         useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
       ),
-      home: CalculatorScreen(),
+      darkTheme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.brown,
+          brightness: Brightness.dark,
+        ),
+        useMaterial3: true,
+      ),
+      themeMode: ThemeMode.system,
+      home: HomePage(),
       debugShowCheckedModeBanner: false,
     );
   }
